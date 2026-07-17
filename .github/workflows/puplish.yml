@@ -1,0 +1,60 @@
+
+name: Publish Datapack and Resource Pack
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create Zips
+        run: |
+          # 1. Resource Pack erstellen
+          cd "resourcepack/Infused Coal RP" && zip -r "../../Infused Coal RP.zip" . && cd ../..
+          
+          # 2. Datapack erstellen
+          cd "datapack/Infused Coal DP" && zip -r "../../Infused Coal DP.zip" . && cd ../..
+
+      - name: Modrinth Publish
+        uses: cloudnode-pro/modrinth-publish@v2.5.0
+        with:
+          # Modrinth Token
+          token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # Project ID
+          project: ...
+
+          # The version number (from tag, e.g., v1.1)
+          version: "${{ github.ref_name }}"
+
+          # The title of the version on Modrinth
+          name: "${{ github.ref_name }}"
+          
+          # 'release', 'beta', or 'alpha'
+          channel: release
+          
+          # List both files
+          files: |-
+            Infused Coal DP.zip
+            Infused Coal RP.zip
+          
+          # Define which file is which
+          # Format: filename=type
+          file-types: |-
+            Infused Coal RP.zip=required-resource-pack
+          
+          # Sets the Datapack as the main download button
+          primary-file: "Infused Coal DP.zip"
+
+          loaders: |-
+            minecraft
+            datapack
+            
+          game-versions: |-
+            26.3-snapshot-1

@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:conditional",
+  "condition": "infused_coal:multi_block_furnace",
+  "on_false": 0,
+  "on_true": 4.0
+}

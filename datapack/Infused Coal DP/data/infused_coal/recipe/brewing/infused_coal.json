@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:brewing",
+  "input": {
+    "item": "coal"
+  },
+  "output": {
+    "id": "coal",
+    "components": {
+      "minecraft:item_name": "Blaze Infused Coal",
+      "minecraft:item_model": "infused_coal:infused_coal",
+      "cooking_fuel": {
+        "burn_time": "infused_coal:cooking/time_coal",
+        "speed_multiplier": "infused_coal:cooking/speed_fast"
+      }
+    },
+    "count": 1
+  },
+  "reagent": {
+    "item": "minecraft:blaze_powder"
+  }
+}

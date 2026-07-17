@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 1,
+          "offsetZ": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_stairs",
+              "state": {
+                "facing": {
+                  "min": "north",
+                  "max": "north"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 1,
+          "offsetZ": -1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_stairs",
+              "state": {
+                "facing": {
+                  "min": "south",
+                  "max": "south"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 2,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mp_furnace_wall"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetX": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetX": -1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_block"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetX": 1,
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_stairs",
+              "state": {
+                "facing": {
+                  "min": "west",
+                  "max": "west"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetX": -1,
+          "offsetY": 1,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mb_furnace_stairs",
+              "state": {
+                "facing": {
+                  "min": "east",
+                  "max": "east"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "offsetY": 2,
+          "predicate": {
+            "block": {
+              "blocks": "#infused_coal:mp_furnace_wall"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
