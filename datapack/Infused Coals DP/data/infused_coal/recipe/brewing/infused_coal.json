@@ -4,14 +4,16 @@
     "item": "coal"
   },
   "output": {
-    "id": "coal",
+    "id": "music_disc_11",
     "components": {
+      "max_stack_size": 64,
       "minecraft:item_name": "Blaze Infused Coal",
       "minecraft:item_model": "infused_coal:infused_coal",
       "cooking_fuel": {
         "burn_time": "infused_coal:cooking/time_coal",
         "speed_multiplier": "infused_coal:cooking/speed_fast"
-      }
+      },
+      "!minecraft:jukebox_playable": {}
     },
     "count": 1
   },

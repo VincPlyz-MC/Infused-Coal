@@ -1,6 +1,5 @@
 {
     "values": [
-        "minecraft:tick",
         "infused_coal:tick"
     ]
 }
