@@ -37,7 +37,7 @@ jobs:
           name: "${{ github.ref_name }}"
           
           # 'release', 'beta', or 'alpha'
-          channel: release
+          channel: alpha
           
           # List both files
           files: |-
@@ -49,7 +49,7 @@ jobs:
           file-types: |-
             Infused Coals RP.zip=required-resource-pack
           
-          # Sets the Datapack as the main download button
+          # Sets the Datapack as the main download
           primary-file: "Infused Coals DP.zip"
 
           loaders: |-
